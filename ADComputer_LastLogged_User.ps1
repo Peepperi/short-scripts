@@ -1,0 +1,1 @@
+Get-WinEvent -Computer fi-sysdevax3 -FilterHashtable @{Logname='Security';ID=4672} -MaxEvents 20 | select @{N='User';E={$_.Properties[1].Value}}

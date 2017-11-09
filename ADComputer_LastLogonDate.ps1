@@ -1,0 +1,2 @@
+Get-ADComputer -SearchBase "OU=Servers,OU=RESOURCES,DC=SBS,DC=LAN" -Filter * -Properties * | Select-Object Name,Created,LastLogonDate,IPv4Address | Sort-Object LastLogonDate
+#Export-Csv C:\temp\SBSServersNames2.csv -Delimiter ";"
